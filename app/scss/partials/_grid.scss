@@ -1,0 +1,73 @@
+// Flex items not vertically centering their items in Firefox!
+// Try display: -moz-box or other venfor prefixes
+
+@for $i from 1 through 16 {
+  .item-#{$i} {
+    grid-area: item-#{$i}
+  }
+}
+
+.grid-container {
+  display: grid;
+  height: calc(100%);
+  grid-template-columns: 30% repeat(3, 23.33%);
+  grid-template-rows: repeat(6, minmax(16.66%, 1fr));
+  grid-template-areas:
+    "item-1 item-2 item-2 item-3"
+    "item-1 item-2 item-2 item-4"
+    "item-5 item-6 item-7 item-8"
+    "item-9 item-10 item-10 item-11"
+    "item-12 item-10 item-10 item-13"
+    "item-14 item-15 item-16 item-16";
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //temp
+  font-family: 'Helvetica';
+  font-weight: 100;
+  font-size: 1em;
+
+  .text-wrap {
+    padding: 10%;
+  }
+}
+
+// Row 1
+.item-1 { background-color: $sunflower }
+.item-2 { background-color: #fff }
+.item-3 { background-color: $carrot }
+.item-4 { background-color: $silver }
+
+// Row 2
+.item-5 { background-color: #fff }
+.item-6 { background-color: $turquoise }
+.item-7 { background-color: #fff }
+.item-8 { background-color: $orange }
+
+// Row 3
+.item-9 { background-color: $wet-asphalt }
+.item-10 { background-color: $silver }
+.item-11 { background: honeydew }
+.item-12 { background: #fff }
+.item-13 { background: #fff }
+.item-14 { background: $emerald }
+
+// Row 4
+.item-15 { background: lime }
+.item-16 { background: pink }
+
+
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+
+
+} // end medium-up
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+
+}
