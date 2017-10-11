@@ -78,9 +78,6 @@ p {
 .item-16 {
   grid-area: item-16; }
 
-.item-17 {
-  grid-area: item-17; }
-
 .grid-container {
   display: -ms-grid;
   display: grid;
