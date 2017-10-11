@@ -1,31 +1,12 @@
-// Flex items not vertically centering their items in Firefox!
-// Try display: -moz-box or other venfor prefixes
 
-@for $i from 1 through 16 {
-  .item-#{$i} {
-    grid-area: item-#{$i}
-  }
-}
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 30% repeat(3, 23.33%);
-  grid-template-rows: repeat(6, minmax(16.66%, 1fr));
-  grid-template-areas:
-    "item-1 item-2 item-2 item-3"
-    "item-1 item-2 item-2 item-4"
-    "item-5 item-6 item-7 item-8"
-    "item-9 item-10 item-10 item-11"
-    "item-12 item-10 item-10 item-13"
-    "item-14 item-15 item-16 item-16";
-  min-height: 100vh;
-  padding: 5% 0;
-  border: 1px solid red;
-  box-sizing: border-box;
-}
+
+
 
 
 .item {
+
+  height: 33vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,10 +49,36 @@
 /* Medium and up */
 @media screen and (min-width: 40em) {
 
+  .item {
+    height: auto;
+  }
+
+  @for $i from 1 through 16 {
+    .item-#{$i} {
+      grid-area: item-#{$i}
+    }
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% repeat(3, 23.33%);
+    grid-template-rows: repeat(6, minmax(16.66%, 1fr));
+    grid-template-areas:
+      "item-1 item-2 item-2 item-3"
+      "item-1 item-2 item-2 item-4"
+      "item-5 item-6 item-7 item-8"
+      "item-9 item-10 item-10 item-11"
+      "item-12 item-10 item-10 item-13"
+      "item-14 item-15 item-16 item-16";
+    min-height: 100vh;
+    padding: 5% 0;
+    border: 1px solid red;
+    box-sizing: border-box;
+  }
 
 } // end medium-up
 
 /* Large and up */
 @media screen and (min-width: 64em) {
 
-}
+} // end large-up
