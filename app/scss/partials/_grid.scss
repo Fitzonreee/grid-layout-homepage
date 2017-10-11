@@ -9,7 +9,6 @@
 
 .grid-container {
   display: grid;
-  height: calc(100%);
   grid-template-columns: 30% repeat(3, 23.33%);
   grid-template-rows: repeat(6, minmax(16.66%, 1fr));
   grid-template-areas:
@@ -19,7 +18,12 @@
     "item-9 item-10 item-10 item-11"
     "item-12 item-10 item-10 item-13"
     "item-14 item-15 item-16 item-16";
+  min-height: 100vh;
+  padding: 5% 0;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
+
 
 .item {
   display: flex;
