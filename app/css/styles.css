@@ -3,7 +3,7 @@ html, body {
   padding: 0; }
 
 body {
-  background: #3498db; }
+  background: #FDFFF7; }
 
 p {
   margin: 0; }
@@ -20,6 +20,12 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+.item-1 {
+  background: url("../images/kevin-temp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .item-2 h1 {
   margin: 5px 0;
@@ -139,7 +145,6 @@ p {
     grid-template-areas: "item-1 item-2 item-2 item-3" "item-1 item-2 item-2 item-4" "item-5 item-6 item-7 item-8" "item-9 item-10 item-10 item-11" "item-12 item-10 item-10 item-13" "item-14 item-15 item-16 item-16";
     min-height: 100vh;
     padding: 5% 0;
-    border: 1px solid red;
     box-sizing: border-box; } }
 
 /* Large and up */

@@ -1,11 +1,5 @@
 
-
-
-
-
-
 .item {
-
   height: 33vh;
   display: flex;
   justify-content: center;
@@ -72,8 +66,8 @@
       "item-14 item-15 item-16 item-16";
     min-height: 100vh;
     padding: 5% 0;
-    border: 1px solid red;
     box-sizing: border-box;
+    // border: 1px solid red;
   }
 
 } // end medium-up

@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background: $peter-river;
+  background: $light-grey;
   // for Firefox
   // overflow: hidden;
 }
@@ -14,8 +14,6 @@ p { margin: 0 }
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
-
-
   display: flex;
   align-items: center;
   justify-content: center;
